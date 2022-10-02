@@ -1,9 +1,8 @@
 const express = require("express")
 const app = express()
+const routesApp = require("./routes/main")
 
-app.get("/", (req, res) => {
-    res.send("hola mundo")
-})
+routesApp(app)
 
 app.listen(8080, () => {
     console.log("8080")
